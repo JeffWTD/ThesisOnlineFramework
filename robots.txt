@@ -1,1 +1,1 @@
-Sitemap: https://gitlab.com/sitemap.xml
+Sitemap: https://github.io/ThesisOnlineFramework/sitemap.xml
