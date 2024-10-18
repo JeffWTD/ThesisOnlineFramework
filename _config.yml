@@ -9,7 +9,7 @@ first_name: John                    # Put your first name here
 middle_name:                        # If you have a middle name, put it here
 last_name: Doe                      # Put your last name here
 jobtitle: Developer Extraordinaire  # Put your job title here
-email: johndoe@gmail.com            # Put your email here
+email: contact@johndoe.com          # Put your email here
 description: >                      # Change the description here
   The portfolio site of John Doe. 
   
