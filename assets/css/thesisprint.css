@@ -1,0 +1,162 @@
+@page {
+    size: a4 portrait;
+    margin: 20mm;
+    background-color: white;
+
+    @top-left-corner {
+        content: " ";
+        background-color: red;
+    }
+
+    @top-left {
+        content: " ";
+        background-color: orangered;
+    }
+
+    @top-center {
+        content: " ";
+        background-color: orange;
+    }
+
+    @top-right {
+        content: " ";
+        background-color: yellow;
+    }
+
+    @top-right-corner {
+        content: " ";
+        background-color: yellowgreen;
+    }
+
+    @bottom-left-corner {
+        content: " ";
+        background-color: green;
+    }
+
+    @bottom-left {
+        content: " ";
+        background-color: lightseagreen;
+    }
+
+    @bottom-center {
+        content: " ";
+        background-color: deepskyblue;
+    }
+
+    @bottom-right {
+        content: " ";
+        background-color: blue;
+    }
+
+    @bottom-right-corner {
+        content: " ";
+        background-color: rebeccapurple;
+    }
+
+    @left-top {
+        content: " ";
+        background-color: brown;
+    }
+
+    @left-middle {
+        content: " ";
+        background-color: rosybrown;
+    }
+
+    @left-bottom {
+        content: " ";
+        background-color: saddlebrown;
+    }
+
+    @right-top {
+        content: " ";
+        background-color: seagreen;
+    }
+
+    @right-middle {
+        content: " ";
+        background-color: lawngreen;
+    }
+
+    @right-bottom {
+        content: " ";
+        background-color: palegreen;
+    }
+}
+
+/* Targets all even-numbered pages */
+@page:left {
+    @bottom-left {
+        content: "Page " counter(page) " of " counter(pages) !important;
+    }
+}
+
+/* Targets all odd-numbered pages */
+@page:right {
+    @bottom-right {
+        content: "Page " counter(page) " of " counter(pages) !important;
+    }
+}
+
+@media print {
+    /* All your print styles go here */
+    header, .betterheadercontainer, .hideInPrint, footer {
+        display: none !important;
+    }
+
+    html, body {
+        margin: 0 !important;
+        padding: 0 !important;
+        min-width: auto !important;
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+        font-weight: normal;
+        text-align: left;
+        background-color: #DDDDDD;
+    }
+
+    #contentcontainer {
+        margin: 0;
+        padding: 0;
+        min-width: auto !important;
+        max-width: none;
+
+        .row {
+            margin: 0px;
+            padding: 0px;
+        }
+    }
+
+    .content {
+        margin: 0;
+        padding: 0;
+        flex: none;
+        max-width: none;
+
+        h1, h2, h3, h4, h5 {
+            font-weight: 600;
+            width: 100%;
+            margin-bottom: 1em;
+        }
+
+        h1 {
+            text-align: center;
+            break-before: page;
+        }
+
+        h3, h5 {
+            font-style: italic;
+        }
+
+        h4, h5 {
+            padding-left: 4em;
+            width: auto;
+            margin-bottom: auto;
+        }
+
+        table, figure, .row {
+            page-break-inside: avoid;
+        }
+    }
+}
+

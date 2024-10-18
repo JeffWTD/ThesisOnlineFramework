@@ -1,0 +1,367 @@
+# -----------------------------------------------------------------------------
+# Site settings
+#
+# Please change these
+# -----------------------------------------------------------------------------
+
+title: John Doe                     # The title on the top left of the site
+first_name: John                    # Put your first name here
+middle_name:                        # If you have a middle name, put it here
+last_name: Doe                      # Put your last name here
+jobtitle: Developer Extraordinaire  # Put your job title here
+email: johndoe@gmail.com            # Put your email here
+description: >                      # Change the description here
+  The portfolio site of John Doe. 
+  
+keywords: portfolio, portfolio-website, your name here  # add your own keywords or leave empty
+lang: en                                                # the language of your site (for example: en, nl, fr, etc.)
+icon: favicon.png                                       # the icon of your site that shows up in the browser tab, you can edit the file in the assets/img/ folder
+
+# -----------------------------------------------------------------------------
+# Social integration
+#
+# For each of these social media platforms you can add your username or ID
+# If you do, a social media icon will show up on the Home page
+# -----------------------------------------------------------------------------
+
+# Professional
+github_username:        # your GitHub user name
+gitlab_username:        # your GitLab user name
+linkedin_username:      # your LinkedIn user name
+work_url:               # work page URL (the website of the company your work at)
+
+# Less professional
+discord_id:             # your discord id (18-digit unique numerical identifier)
+facebook_id:            # your facebook id
+instagram_id:           # your instagram id
+pinterest_id:           # your pinterest id
+spotify_id:             # your spotify id
+telegram_username:      # your Telegram user name
+whatsapp_number:        # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
+x_username:             # your X handle
+youtube_id:             # your youtube channel id (youtube.com/@<youtube_id>)
+
+# Less common
+blogger_url:            # your blogger URL
+bluesky_url:            # your bluesky URL
+dblp_url:               # your DBLP profile url
+flickr_id:              # your flickr id
+kaggle_id:              # your kaggle id
+keybase_username:       # your keybase user name
+lastfm_id:              # your lastfm id
+lattes_id:              # your ID on Lattes (Brazilian Lattes CV)
+mastodon_username:      # your mastodon instance+username in the format instance.tld/@username
+medium_username:        # your Medium username
+orcid_id:               # your ORCID ID
+osf_id:                 # your OSF ID
+publons_id:             # your ID on Publons
+quora_username:         # your Quora username
+research_gate_profile:  # your profile on ResearchGate
+scholar_userid:         # your Google Scholar ID
+scopus_id:              # your profile on Scopus
+semanticscholar_id:     # your Semantic Scholar ID
+stackoverflow_id:       # your stackoverflow id
+unsplash_id:            # your unsplash id
+wikidata_id:            # your wikidata id
+wikipedia_id:           # your wikipedia id (Case sensitive)
+zotero_username:        # your zotero username
+
+contact_note: >         # This message will be put underneath the social icons on the Home page
+  Want to reach out? Send me an email!
+
+# -----------------------------------------------------------------------------
+#
+# That's it! You're done!
+#
+# Please leave the following settings as-is!
+#
+# -----------------------------------------------------------------------------
+
+#
+
+#
+
+#
+
+#
+
+#
+
+#
+
+#
+
+#
+
+#
+
+#
+
+url: https://gitlab.com # the base hostname & protocol for your site
+baseurl: / # the subpath of your site, e.g. /blog/. Leave blank for root
+last_updated: false # set to true if you want to display last updated in the footer
+impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
+
+# -----------------------------------------------------------------------------
+# Theme
+# -----------------------------------------------------------------------------
+
+# repo color theme
+repo_theme_light: default # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
+repo_theme_dark: dark # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
+
+# -----------------------------------------------------------------------------
+# Layout
+# -----------------------------------------------------------------------------
+
+navbar_fixed: true
+footer_fixed: false
+
+# Dimensions
+max_width: 800px
+
+# TODO: add layout settings (single page vs. multi-page)
+
+# -----------------------------------------------------------------------------
+# Open Graph & Schema.org
+# -----------------------------------------------------------------------------
+# Display links to the page with a preview object on social media.
+# see https://schema.org/docs/faq.html for more information
+serve_og_meta: false # Include Open Graph meta tags in the HTML head
+serve_schema_org: false # Include Schema.org in the HTML head
+og_image: # The site-wide (default for all links) Open Graph preview image
+
+
+
+# -----------------------------------------------------------------------------
+# Analytics and search engine verification
+# -----------------------------------------------------------------------------
+
+# For Google Analytics, see https://support.google.com/analytics/answer/10447272?hl=en&ref_topic=14088998&sjid=5129943941510317771-SA#zippy=%2Cgoogle-sites
+# and follow the instructions for Google Sites. You will need to create a Google Analytics property and copy the Google tag ID.
+google_analytics: # your Google Analytics measurement ID (format: G-XXXXXXXXXX)
+cronitor_analytics: # cronitor RUM analytics site ID (format: XXXXXXXXX)
+
+# For Google Search Console, see https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification&zippy=%2Chtml-tag
+google_site_verification: # your google-site-verification ID (Google Search Console)
+bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
+
+# -----------------------------------------------------------------------------
+# Collections
+# -----------------------------------------------------------------------------
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+announcements:
+  enabled: false
+  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
+  limit: 5 # leave blank to include all the news in the `_news` folder
+
+latest_posts:
+  enabled: false
+  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
+  limit: 3 # leave blank to include all the blog posts
+
+# -----------------------------------------------------------------------------
+# Jekyll settings
+# -----------------------------------------------------------------------------
+
+# Markdown and syntax highlight
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    css_class: "highlight"
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+      start_line: 1
+
+# Includes & excludes
+include: ["_pages"]
+exclude:
+  - bin/
+  - CONTRIBUTING.md
+  - CUSTOMIZE.md
+  - Dockerfile
+  - docker-compose.yml
+  - docker-compose-slim.yml
+  - FAQ.md
+  - Gemfile
+  - Gemfile.lock
+  - INSTALL.md
+  - LICENSE
+  - lighthouse_results/
+  - package.json
+  - package-lock.json
+  - purgecss.config.js
+  - README.md
+  - readme_preview/
+  - vendor
+keep_files:
+  - CNAME
+  - .nojekyll
+
+# Plug-ins
+plugins:
+  - jekyll-email-protect
+  - jekyll-get-json
+  - jekyll-imagemagick
+  - jekyll-link-attributes
+  - jekyll-minifier
+  - jekyll-sitemap
+  - jekyll-toc
+
+# Sitemap settings
+defaults:
+  - scope:
+      path: "assets"
+    values:
+      sitemap: false
+
+sass:
+  # style: compressed
+  sourcemap: never
+
+# -----------------------------------------------------------------------------
+# Jekyll Minifier
+# -----------------------------------------------------------------------------
+
+jekyll-minifier:
+  exclude: 
+    - assets/js/paged.polyfill.js
+  uglifier_args:
+    harmony: true
+
+# -----------------------------------------------------------------------------
+# Jekyll Link Attributes
+# -----------------------------------------------------------------------------
+
+# These are the defaults
+external_links:
+  enabled: true
+  rel: external nofollow noopener
+  target: _blank
+  exclude:
+
+# -----------------------------------------------------------------------------
+# Responsive WebP Images
+# -----------------------------------------------------------------------------
+
+# MAKE SURE imagemagick is installed and on your PATH before enabling imagemagick. In a terminal, run:
+#   convert -version
+imagemagick:
+  enabled: true # enables responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
+  widths:
+    - 480
+    - 800
+    - 1400
+  input_directories:
+    - assets/img/
+  input_formats:
+    - ".jpg"
+    - ".jpeg"
+    - ".png"
+    - ".tiff"
+    - ".gif"
+  output_formats:
+    webp: "-quality 85"
+
+# Lazy loading images
+#   If you enable lazy loading, all images will add the loading="lazy" attribute.
+#   This will make your site load faster, but it may not be supported in all browsers.
+#   You can also set loading="" to other values for specific images to override the default behavior.
+#   Options: "auto", "eager", "lazy"
+#   See https://web.dev/browser-level-image-lazy-loading/ for more information.
+lazy_loading_images: true # enables lazy loading of images (recommended)
+
+# -----------------------------------------------------------------------------
+# Optional Features
+# -----------------------------------------------------------------------------
+
+enable_google_analytics: false # enables google analytics
+enable_cronitor_analytics: false # enables cronitor RUM analytics
+enable_google_verification: false # enables google site verification
+enable_bing_verification: false # enables bing site verification
+enable_math: true # enables math typesetting (uses MathJax)
+enable_tooltips: false # enables automatic tooltip links generated for each section titles on pages and posts
+enable_darkmode: true # enables switching between light/dark modes
+enable_medium_zoom: true # enables image zoom feature (as on medium.com)
+enable_progressbar: true # enables a horizontal progress bar linked to the vertical scroll position
+
+# -----------------------------------------------------------------------------
+# Library versions
+# -----------------------------------------------------------------------------
+
+bootstrap-table:
+  version: "1.22.1"
+d3:
+  version: "7.8.5"
+  integrity: "sha256-1rA678n2xEx7x4cTZ5x4wpUCj6kUMZEZ5cxLSVSFWxw="
+highlightjs:
+  version: "11.9.0"
+  integrity:
+    css:
+      light: "sha256-Oppd74ucMR5a5Dq96FxjEzGF7tTw2fZ/6ksAqDCM8GY="
+      dark: "sha256-nyCNAiECsdDHrr/s2OQsp5l9XeY2ZJ0rMepjCT2AkBk="
+imagesloaded:
+  version: "5.0.0"
+  integrity: "sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc="
+img-comparison-slider:
+  version: "8.0.6"
+jquery:
+  version: "3.6.0"
+  integrity: "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+mathjax:
+  version: "3.2.0"
+mdb:
+  version: "4.20.0"
+  integrity:
+    css: "sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw="
+    js: "sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA="
+medium_zoom:
+  version: "1.1.0"
+  integrity: "sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc="
+swiper:
+  version: "11.0.5"
+  integrity:
+    css: "sha256-yUoNxsvX+Vo8Trj3lZ/Y5ZBf8HlBFsB6Xwm7rH75/9E="
+    js: "sha256-BPrwikijIybg9OQC5SYFFqhBjERYOn97tCureFgYH1E="
+third_party_libraries:
+  mermaid:
+    integrity:
+      js: "sha256-TtLOdUA8mstPoO6sGvHIGx2ceXrrX4KgIItO06XOn8A="
+    url:
+      js: "https://cdn.jsdelivr.net/npm/mermaid@10.7.0/dist/mermaid.min.js"
+  d3:
+    integrity:
+      js: "sha256-1rA678n2xEx7x4cTZ5x4wpUCj6kUMZEZ5cxLSVSFWxw="
+    url:
+      js: "https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"
+
+
+# -----------------------------------------------------------------------------
+# Get external JSON data
+# -----------------------------------------------------------------------------
+
+jekyll_get_json:
+  - data: resume
+    json: assets/json/resume.json # it can also be an url
+jsonresume:
+  - basics
+  - work
+  - education
+  - publications
+  - projects
+  - volunteer
+  - awards
+  - certificates
+  - skills
+  - languages
+  - interests
+  - references

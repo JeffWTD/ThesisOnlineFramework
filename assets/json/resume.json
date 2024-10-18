@@ -1,0 +1,73 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "John Doe",
+    "label": "Developer Extraordinaire",
+    "image": "",
+    "email": "johndoe@gmail.com",
+    "phone": "",
+    "url": "",
+    "summary": "Write something about yourself.",
+    "location": {
+      "countryCode": "BE",
+      "address": ""
+    }
+  },
+  "work": [
+    {
+      "name": "Best Game Company",
+      "position": "Internship as programmer",
+      "startDate": "2022-08-30",
+      "endDate": "2022-11-10",
+      "highlights": [],
+      "summary": "During my internship at Best Game Company I learned how to...",
+      "url": "https://www.google.com",
+      "location": "Genk, Vlaanderen, België"
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "LUCA School of Arts",
+      "area": "Game Design",
+      "studyType": "Bachelor in the Audio Visual Arts",
+      "startDate": "2024-09-01",
+      "endDate": "",
+      "score": "",
+      "courses": []
+    }
+  ],
+  "awards": [
+    {
+      "title": "Wanatoe 2024 Nominee",
+      "date": "2024-06-20",
+      "awarder": "Het Belang Van Limburg",
+      "summary": "For my master's project I was nominated for the Wanatoe 2024 award."
+    }
+  ],
+  "certificates": [],
+  "publications": [],
+  "skills": [],
+  "languages": [
+    {
+      "language": "Dutch",
+      "fluency": "Native Speaker"
+    },
+    {
+	    "language": "English",
+      "fluency": "Proficient"
+    }
+  ],
+  "interests": [],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "John is an amazing developer. During our time at Best Game Company he worked on..."
+    }
+  ],
+  "projects": [],
+  "meta": {
+    "version": "v1.0.0",
+    "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
+  }
+}

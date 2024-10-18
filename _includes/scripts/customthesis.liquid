@@ -1,0 +1,15 @@
+<!-- Unity WebGL Functionality -->
+<script>
+    window.PagedConfig = {
+		auto: false,
+		after: (flow) => { console.log("after", flow) },
+	};
+
+    function ConvertToPages() {
+        window.PagedPolyfill.preview();
+    }
+
+    function Print() {
+        window.print();
+    }
+</script>

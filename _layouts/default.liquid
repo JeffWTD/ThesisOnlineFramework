@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+  	<!-- Head -->
+  	<head>
+    	{% if page.redirect %}
+      		{% if page.redirect == true %}
+        		{% assign redirect = site.baseurl | append: '/' %}
+      		{% elsif page.redirect contains '://' %}
+        		{% assign redirect = page.redirect %}
+      		{% else %}
+        		{% assign redirect = page.redirect | relative_url %}
+      		{% endif %}
+      		<meta http-equiv="refresh" content="3; url={{ redirect }}"/>
+    	{% endif %}
+    	{% include head.liquid %}
+
+    	{% include scripts/jquery.liquid %}
+
+    	{% if page.thesis %}
+      		<link rel="stylesheet" media="print" href="{{ '/assets/css/thesisprint.css' | relative_url | bust_css_cache }}">
+        	<!-- Distill js -->
+    		<script src="{{ '/assets/js/distillpub/overrides.js' | relative_url }}"></script>
+    		<script src="{{ '/assets/js/distillpub/template.v2.js' | relative_url }}"></script>
+    		<script src="{{ '/assets/js/distillpub/transforms.v2.js' | relative_url }}"></script>
+    	{% endif %}
+    </head>
+
+    <!-- Body -->
+    <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+        <!-- Dummy script to make Firefox show page after all Head CSS is loaded -->  
+        <script>0</script> 
+
+        <!-- Header -->
+        {% include header.liquid %}
+
+    <!-- Content -->
+    {% if page.toc and page.toc.sidebar %}
+        <div id="contentcontainer" class="container widepage" role="main">
+            <div class="row">
+                <!-- sidebar, which will move to the top on a small screen -->
+                <div class="hideInPrint col-xl-2 col-lg-2 col-md-12 col-sm-12">
+                    <nav id="toc-sidebar" class="sticky-top"></nav>
+                </div>
+
+                <!-- main content area -->
+                <div id="content" class="content col-xl-8 col-lg-9 col-md-12 col-sm-12 {% if page.thesis %}thesiscontent{% endif %}">
+                    {{ content }}
+                </div>
+                
+                <!-- right side spacer -->
+                <div class="hideInPrint d-lg-block col-xl-2 col-lg-1"></div>
+            </div>
+        </div>
+    {% else %}
+        <div id="contentcontainer" class="container {% if page.thesis %}thesiscontent{% endif %}" role="main">
+            {{ content }}
+        </div>
+    {% endif %}
+
+    
+
+    <!-- Footer -->
+    {% include footer.liquid %}
+
+    <!-- JavaScripts -->
+    {% include scripts/bootstrap.liquid %}
+    {% include scripts/mermaid.liquid %}
+    {% include scripts/misc.liquid %}
+    {% include scripts/mathjax.liquid %}
+    {% include scripts/analytics.liquid %}
+    {% include scripts/progressBar.liquid %}
+    {% include scripts/imageLayouts.liquid %}
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+    {% include scripts/custom.liquid %}
+
+    {% if page.thesis %}
+    	<script src="{{ '/assets/js/tableofcontents.js' | relative_url | bust_file_cache }}"></script>
+    	{% include scripts/customthesis.liquid %}
+    	<script src="{{ 'assets/js/paged.polyfill.js' | relative_url }}"></script>
+
+    	<!-- Disable Prism automatically highlighting all code bacause we already have code higlighting -->
+    	<script>Prism.manual = true;</script>
+    {% endif %}
+    
+    {% if page.bibliography %}
+      	<d-bibliography src="{{ page.bibliography | prepend: '/assets/bibliography/' | relative_url }}"></d-bibliography>
+    {% endif %}
+
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<figure>
+  	<audio
+    	src="{% if include.cache_bust %}{{ include.path | relative_url | bust_file_cache }}{% else %}{{ include.path | relative_url }}{% endif %}"
+    	class="audio"
+    	alt="{% if include.caption %}{{ include.caption }}{% elsif include.alt %}{{ include.alt }}{% endif %}"
+    	{% if include.title %}
+      		title="{{ include.title }}"
+    	{% endif %}
+    	controls
+    	{% if include.loop %}
+      		loop
+    	{% endif %}
+    	{% if include.muted %}
+     		muted
+    	{% endif %}
+  	>
+  	</audio>
+
+  	{% if include.caption %}
+    	<figcaption class="caption">{{ include.caption }}</figcaption>
+  	{% endif %}
+</figure>

@@ -1,0 +1,548 @@
+/*////////////////////////////////////////
+//              Document                //
+////////////////////////////////////////*/
+
+body {
+    position: relative;
+    padding-bottom: 60px;
+    min-height: 100vh;
+
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    #contentcontainer {
+        margin-top: 3rem !important;
+        padding-bottom: 10rem !important;
+    }
+}
+
+
+/*///////////////////////////////////////
+//              Utility                //
+///////////////////////////////////////*/
+
+.bold {
+    font-weight: 700;
+}
+
+.semi-bold {
+    font-weight: 600;
+}
+
+.medium-bold {
+    font-weight: 500;
+}
+
+.extra-bold {
+    font-weight: 800;
+}
+
+.aspect16by9 {
+    aspect-ratio: 16/9 !important;
+}
+
+.aspect9by16 {
+    aspect-ratio: 9/16 !important;
+}
+
+.aspect4by3 {
+    aspect-ratio: 4/3 !important;
+}
+
+.aspect3by4 {
+    aspect-ratio: 3/4 !important;
+}
+
+/*////////////////////////////////////////
+//              Al-folio                //
+////////////////////////////////////////*/
+
+footer.fixed-bottom {
+    position: absolute;
+    bottom: 0;
+}
+
+.page-title {
+    font-size: 40px;
+    margin-bottom: 0px;
+}
+
+.page-subtitle {
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+.cv_pdf_button {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 30px;
+}
+
+nav .container {
+    padding-bottom: 0;
+}
+
+.widepage {
+    max-width: 1200px;
+}
+
+.row {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+//html[data-theme-setting="light"] {}
+
+//html[data-theme-setting="dark"] {}
+
+/*//////////////////////////////////////
+//              Common                //
+//////////////////////////////////////*/
+
+.button {
+    background-color: var(--global-theme-color);
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+
+    :hover {
+        background-color: var(--global-hover-color);
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+    
+        svg {
+            margin: auto;
+        }
+    }
+
+    .iconandtext {
+        display: inline-block;
+        padding: 10px 18px;
+    
+        svg {
+            margin-right: 5px;
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        z-index: 100;
+    }
+}
+
+figure {
+    max-width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+
+    :first-child {
+        margin-top: 0;
+    }
+
+    picture {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+figcaption, .caption {
+    color: var(--global-text-color);
+    margin-bottom: 0;
+}
+
+.audio,
+.video {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.video {
+    aspect-ratio: 16/9;
+}
+
+/*//////////////////////////////////////
+//              Custom                //
+//////////////////////////////////////*/
+
+.mermaid {
+    margin-top: 1rem;
+}
+
+.game {
+    width: 100%;
+    padding: 0;
+    position: relative;
+
+    iframe,
+    .game-controls {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    iframe {
+        background-size: cover;
+        display: block;
+    }
+
+    .game-load {
+        display: block;
+    }
+
+    .game-quit,
+    .game-fullscreen {
+        display: none;
+        position: relative;
+        margin-left: 10px;
+        background-color: transparent;
+    }
+
+    .game-quit:hover,
+    .game-fullscreen:hover {
+        background-color: var(--global-hover-color);
+    }
+
+    .game-controls {
+        padding: 0;
+        height: 30px;
+        background-color: var(--global-footer-bg-color);
+        border-radius: 10px 10px 0 0;
+        display: flex;
+        justify-content: right;
+    }
+}
+
+.game-running {
+    .game-load {
+        display: none;
+    }
+
+    .game-quit,
+    .game-fullscreen {
+        display: block;
+    }
+}
+
+swiper-slide figure,
+img-comparison-slider figure {
+    margin: 0;
+}
+
+details {
+    margin-top: 0.1rem;
+    margin-bottom: 1rem;
+}
+
+.model {
+    model-viewer {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: relative;
+
+        .lazy-load-poster {
+            left: 30px;
+            top: 30px;
+            right: 30px;
+            bottom: 30px;
+            position: absolute;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    .model-hide {
+        display: none;
+        float: right;
+    }
+}
+
+.model-running {
+    .model-hide {
+        display: block;
+    }
+}
+
+
+/*////////////////////////////////////////
+//              Homepage                //
+////////////////////////////////////////*/
+
+.more-info p {
+    margin-bottom: 0.3rem;
+}
+
+.home-hi {
+    margin-bottom: 5rem;
+
+    span {
+        color: var(--global-theme-color);
+        font-weight: bold;
+    }
+
+    .home-hi-left {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 3rem;
+    }
+}
+
+.home-hi-greeting {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    line-height: 3rem;
+}
+
+.home-hi-subtitle {
+    font-size: 1.25rem;
+}
+
+
+/*////////////////////////////////////////
+//              Projects                //
+////////////////////////////////////////*/
+
+.projects {
+    .card {
+        overflow: hidden;
+        border-radius: 1.5rem;
+        background-color: var(--global-bg-color);
+        border: 0.5rem solid var(--global-bg-color);
+        margin-bottom: 1rem;
+
+        figure {
+            max-height: 200px;
+            overflow: hidden;
+        }
+
+        .card-title {
+            text-align: center;
+            font-size: 25px;
+            color: var(--global-theme-color);
+            font-weight: 600;
+        }
+
+        .card-text {
+            text-align: justify;
+            color: var(--global-footer-bg-color);
+            font-weight: 500;
+        }
+    }
+
+    .card:hover {
+        border: 0.5rem solid var(--global-hover-color);
+    }
+
+    a:hover .card-title {
+        color: var(--global-theme-color);
+    }
+}
+
+.cards-masonry-vertical {
+    column-count: 3;
+    column-width: 240px;
+    column-gap: 1rem;
+}
+
+
+/*///////////////////////////////////////
+//              Thesis                 //
+///////////////////////////////////////*/
+
+.thesiscontent {
+    font-family: sans-serif;
+    margin-bottom: 25vh;
+    text-align: justify;
+
+    strong {
+        font-weight: bold;
+    }
+
+    .thesis-frontpage {
+        height: 100vh;
+        min-height: 1000px;
+        max-height: 29.7cm;
+
+        .school-logo {
+            height: 10vh;
+            min-height: 100px;
+            max-height: 3cm;
+            margin-left: auto;
+            width: 20vh;
+            min-width: 200px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: right;
+        }
+
+        .frontpage-title {
+            display: flex;
+            height: 20vh;
+            min-height: 200px;
+            max-height: 6cm;
+            flex-direction: column;
+            justify-content: center;
+
+            div {
+                width: 100%;
+                text-align: center;
+            }
+
+            .frontpage-title-title {
+                font-weight: bold;
+                font-size: 24px;
+
+            }
+
+            .frontpage-title-subtitle {
+                font-size: 18px;
+            }
+        }
+
+        .frontpage-image {
+            height: 30vh;
+            min-height: 300px;
+            max-height: 9cm;
+            padding-left: 10vh;
+            padding-right: 10vh;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .frontpage-writer {
+            display: flex;
+            height: 20vh;
+            min-height: 200px;
+            max-height: 6cm;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 20px;
+        }
+
+        .frontpage-info {
+            height: 20vh;
+            min-height: 200px;
+            max-height: 6cm;
+            padding-left: 3rem;
+            padding-bottom: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            p {
+                margin-bottom: 5px;
+            }
+        }
+
+    }
+
+    h1,
+    h2,
+    h3 {
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-top: 1em;
+    }
+
+    h1 {
+        margin-top: 5rem;
+        padding-top: 5rem;
+        border-top: 1px solid var(--global-footer-text-color);
+        margin-bottom: 1rem;
+        font-size: 20px;
+    }
+
+    h2 {
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+        font-size: 18px;
+    }
+
+    h3 {
+        margin-top: 1rem;
+        margin-bottom: 0.25rem;
+        font-size: 16px;
+    }
+
+    section {
+        min-height: 100vh;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .thesis-toc-h1 {
+        font-size: 20px;
+        margin-left: 1rem;
+    }
+
+    .thesis-toc-h2 {
+        font-size: 18px;
+        margin-left: 2rem;
+    }
+
+    .thesis-toc-h3 {
+        font-size: 16px;
+        margin-left: 3rem;
+    }
+}
+
+#thesis-toc {
+    margin-bottom: 2rem;
+}
+
+.custom-appendix {
+    font-size: 1rem;
+    line-height: 1.7rem;
+    margin-top: 0;
+    border-top: hidden;
+    padding-top: 20px;
+    padding-bottom: 30px;
+
+    h3 {
+        display: none;
+    }
+
+    ol {
+        margin-left: 2rem;
+        width: 100%;
+    }
+
+    li,
+    span {
+        color: var(--global-text-color) !important;
+    }
+
+    a {
+        color: var(--global-text-color-light) !important;
+    }
+
+    d-footnote-list,
+    d-citation-list {
+        width: 100%;
+        display: block;
+    }
+}

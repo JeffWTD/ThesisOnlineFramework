@@ -1,0 +1,19 @@
+<div class="thesis-frontpage z-depth-1">
+  <div class="school-logo" style="background-image:url('{{ include.schoollogo | relative_url }}')"></div>
+  <div class="frontpage-title">
+    <div class="frontpage-title-title">{{ include.title }}</div>
+    <div class="frontpage-title-subtitle">{{ include.subtitle }}</div>
+  </div>
+  <div class="frontpage-image">
+    <img src="{{ include.picture | relative_url }}" alt="{{ include.title }}">
+  </div>
+  <div class="frontpage-writer">
+    {{ include.writer }}
+  </div>
+  <div class="frontpage-info">
+    <p>{{ include.degree }}</p>
+    <p>{{ include.school }}</p>
+    <p>{{ include.date }}</p>
+    <p>Promotors: {{ include.promotors }}</p>
+  </div>
+</div>

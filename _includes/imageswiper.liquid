@@ -1,0 +1,158 @@
+<div>
+	<swiper-container style="width:100% height:100%" keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
+		{% if include.pictureA %}
+			<swiper-slide>
+				<figure>
+					<picture>
+			  			{% if site.imagemagick.enabled %}
+							<source class="responsive-img-srcset"
+					  			srcset="{% for i in site.imagemagick.widths %}{{ include.pictureA | remove: '.jpg' | remove: '.jpeg' | remove: '.png' | remove: '.tiff' | remove: '.gif' | relative_url }}-{{ i }}.webp {{i}}w,{% endfor %}"
+					  			type="image/webp" sizes="95vw">
+			  			{% endif %}
+				  		<img src="{{ include.pictureA | relative_url }}" class="img-fluid rounded z-depth-1"
+							width="100%" height="auto" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+					</picture>
+				</figure>
+			</swiper-slide>
+		{% endif %}
+		{% if include.pictureB %}
+			<swiper-slide>
+				<figure>
+					<picture>
+				  		{% if site.imagemagick.enabled %}
+							<source class="responsive-img-srcset"
+						  		srcset="{% for i in site.imagemagick.widths %}{{ include.pictureB | remove: '.jpg' | remove: '.jpeg' | remove: '.png' | remove: '.tiff' | remove: '.gif' | relative_url }}-{{ i }}.webp {{i}}w,{% endfor %}"
+						  		type="image/webp" sizes="95vw">
+				  		{% endif %}
+				  		<img src="{{ include.pictureB | relative_url }}" class="img-fluid rounded z-depth-1"
+							width="100%" height="auto" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+					</picture>
+				</figure>
+			</swiper-slide>
+		{% endif %}
+		{% if include.pictureC %}
+			<swiper-slide>
+				<figure>
+					<picture>
+				  		{% if site.imagemagick.enabled %}
+							<source class="responsive-img-srcset"
+						  		srcset="{% for i in site.imagemagick.widths %}{{ include.pictureC | remove: '.jpg' | remove: '.jpeg' | remove: '.png' | remove: '.tiff' | remove: '.gif' | relative_url }}-{{ i }}.webp {{i}}w,{% endfor %}"
+						  		type="image/webp" sizes="95vw">
+				  		{% endif %}
+				  		<img src="{{ include.pictureC | relative_url }}" class="img-fluid rounded z-depth-1"
+							width="100%" height="auto" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+					</picture>
+				</figure>
+			</swiper-slide>
+		{% endif %}
+		{% if include.pictureD %}
+			<swiper-slide>
+				<figure>
+					<picture>
+				  		{% if site.imagemagick.enabled %}
+							<source class="responsive-img-srcset"
+						  		srcset="{% for i in site.imagemagick.widths %}{{ include.pictureD | remove: '.jpg' | remove: '.jpeg' | remove: '.png' | remove: '.tiff' | remove: '.gif' | relative_url }}-{{ i }}.webp {{i}}w,{% endfor %}"
+						  		type="image/webp" sizes="95vw">
+				  		{% endif %}
+				  		<img src="{{ include.pictureD | relative_url }}" class="img-fluid rounded z-depth-1"
+							width="100%" height="auto" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+					</picture>
+				</figure>
+			</swiper-slide>
+		{% endif %}
+		{% if include.pictureE %}
+			<swiper-slide>
+				<figure>
+					<picture>
+				  		{% if site.imagemagick.enabled %}
+							<source class="responsive-img-srcset"
+						  		srcset="{% for i in site.imagemagick.widths %}{{ include.pictureE | remove: '.jpg' | remove: '.jpeg' | remove: '.png' | remove: '.tiff' | remove: '.gif' | relative_url }}-{{ i }}.webp {{i}}w,{% endfor %}"
+						  		type="image/webp" sizes="95vw">
+				  		{% endif %}
+				  		<img src="{{ include.pictureE | relative_url }}" class="img-fluid rounded z-depth-1"
+							width="100%" height="auto" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+					</picture>
+				</figure>
+			</swiper-slide>
+		{% endif %}
+		{% if include.pictureF %}
+			<swiper-slide>
+				<figure>
+					<picture>
+				  		{% if site.imagemagick.enabled %}
+							<source class="responsive-img-srcset"
+						  		srcset="{% for i in site.imagemagick.widths %}{{ include.pictureF | remove: '.jpg' | remove: '.jpeg' | remove: '.png' | remove: '.tiff' | remove: '.gif' | relative_url }}-{{ i }}.webp {{i}}w,{% endfor %}"
+						  		type="image/webp" sizes="95vw">
+				  		{% endif %}
+				  		<img src="{{ include.pictureF | relative_url }}" class="img-fluid rounded z-depth-1"
+							width="100%" height="auto" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+					</picture>
+				</figure>
+			</swiper-slide>
+		{% endif %}
+		{% if include.pictureG %}
+			<swiper-slide>
+				<figure>
+					<picture>
+				  		{% if site.imagemagick.enabled %}
+							<source class="responsive-img-srcset"
+						  		srcset="{% for i in site.imagemagick.widths %}{{ include.pictureG | remove: '.jpg' | remove: '.jpeg' | remove: '.png' | remove: '.tiff' | remove: '.gif' | relative_url }}-{{ i }}.webp {{i}}w,{% endfor %}"
+						  		type="image/webp" sizes="95vw">
+				  		{% endif %}
+				  		<img src="{{ include.pictureG | relative_url }}" class="img-fluid rounded z-depth-1"
+							width="100%" height="auto" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+					</picture>
+				</figure>
+			</swiper-slide>
+		{% endif %}
+		{% if include.pictureH %}
+			<swiper-slide>
+				<figure>
+					<picture>
+				  		{% if site.imagemagick.enabled %}
+							<source class="responsive-img-srcset"
+						  		srcset="{% for i in site.imagemagick.widths %}{{ include.pictureH | remove: '.jpg' | remove: '.jpeg' | remove: '.png' | remove: '.tiff' | remove: '.gif' | relative_url }}-{{ i }}.webp {{i}}w,{% endfor %}"
+						  		type="image/webp" sizes="95vw">
+				  		{% endif %}
+				  		<img src="{{ include.pictureH | relative_url }}" class="img-fluid rounded z-depth-1"
+							width="100%" height="auto" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+					</picture>
+				</figure>
+			</swiper-slide>
+		{% endif %}
+		{% if include.pictureI %}
+			<swiper-slide>
+				<figure>
+					<picture>
+				  		{% if site.imagemagick.enabled %}
+							<source class="responsive-img-srcset"
+						  		srcset="{% for i in site.imagemagick.widths %}{{ include.pictureI | remove: '.jpg' | remove: '.jpeg' | remove: '.png' | remove: '.tiff' | remove: '.gif' | relative_url }}-{{ i }}.webp {{i}}w,{% endfor %}"
+						  		type="image/webp" sizes="95vw">
+				  		{% endif %}
+				  		<img src="{{ include.pictureI | relative_url }}" class="img-fluid rounded z-depth-1"
+							width="100%" height="auto" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+					</picture>
+				</figure>
+			</swiper-slide>
+		{% endif %}
+		{% if include.pictureJ %}
+			<swiper-slide>
+				<figure>
+					<picture>
+				  		{% if site.imagemagick.enabled %}
+							<source class="responsive-img-srcset"
+						  		srcset="{% for i in site.imagemagick.widths %}{{ include.pictureJ | remove: '.jpg' | remove: '.jpeg' | remove: '.png' | remove: '.tiff' | remove: '.gif' | relative_url }}-{{ i }}.webp {{i}}w,{% endfor %}"
+						  		type="image/webp" sizes="95vw">
+				  		{% endif %}
+				  		<img src="{{ include.pictureJ | relative_url }}" class="img-fluid rounded z-depth-1"
+							width="100%" height="auto" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+					</picture>
+				</figure>
+			</swiper-slide>
+		{% endif %}
+	</swiper-container>
+
+	{% if include.caption %}
+		<div class="caption">{{ include.caption }}</div>
+	{% endif %}
+</div>

@@ -1,0 +1,91 @@
+<!-- Unity WebGL Functionality -->
+<script>
+    //document.addEventListener("DOMContentLoaded", function(event){
+    //    $(".model-load")
+    //});
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.intersectionRatio < 0.1) {
+                if (entry.target.classList.contains("game-running")){
+                    WebGLGameTryQuit(entry.target.id);
+                }
+                else if (entry.target.classList.contains("model-running")){
+                    HideModel(entry.target.id);
+                }
+            }
+        })
+    }, { threshold: [0, 1] })
+
+    function LoadModel(modelID)
+    {
+        var model = $("#" + modelID);
+        model.addClass("model-running");
+        document.querySelector("#" + modelID + "_modelViewer").dismissPoster();
+        observer.observe(model[0]);
+    }
+
+    function HideModel(modelID)
+    {
+        var model = $("#" + modelID);
+        model.removeClass("model-running");
+        document.querySelector("#" + modelID + "_modelViewer").showPoster();
+        observer.unobserve(model[0]);
+    }
+
+    function LoadWebGLGame(gameID) 
+    {
+        var game = $("#" + gameID);
+        var iframe = game.find("iframe");
+        iframe.attr("src", iframe.data("src"));
+        game.addClass("game-running");
+        observer.observe(game[0]);
+    }
+
+    function WebGLGameTrySetFullscreen(gameID) 
+    {
+        var iframe = document.getElementById(gameID + "_iframe");
+
+        if (iframe !== null) 
+        {
+            if (iframe.contentWindow !== null) 
+            {
+                if (iframe.contentWindow.betterUnityInstance !== null) 
+                {
+                    iframe.contentWindow.betterUnityInstance.SetFullscreen(1);
+                }
+            }
+        }
+    }
+
+    function WebGLGameTryQuit(gameID) 
+    {
+        var iframe = document.getElementById(gameID + "_iframe");
+
+        if (iframe !== null) 
+        {
+            if (iframe.contentWindow !== null) 
+            {
+                if (iframe.contentWindow.betterUnityInstance !== null) 
+                {
+                    iframe.contentWindow.betterUnityInstance.Quit().then(() => { 
+                        iframe.src = "about:blank"; 
+                        var game = $("#" + gameID);
+                        game.removeClass("game-running");
+                        observer.unobserve(game[0]);
+                    });
+                }
+            }
+        }
+    }
+
+    window.onload = function() {
+        //Resize all .game child iframes to round height to nearest integer
+        $(".game iframe").each(function() {
+            var iframe = $(this);
+            var height = Math.round(iframe.height());
+            iframe.height(height);
+        });
+    };
+    
+</script>

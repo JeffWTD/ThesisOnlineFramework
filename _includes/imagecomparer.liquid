@@ -1,0 +1,30 @@
+<div>
+	<img-comparison-slider>
+		<figure slot="first">
+			<picture>
+			  	{% if site.imagemagick.enabled %}
+					<source class="responsive-img-srcset"
+						  srcset="{% for i in site.imagemagick.widths %}{{ include.pictureFirst | remove: '.jpg' | remove: '.jpeg' | remove: '.png' | remove: '.tiff' | remove: '.gif' | relative_url }}-{{ i }}.webp {{i}}w,{% endfor %}"
+						  type="image/webp" sizes="95vw">
+			  	{% endif %}
+			  	<img src="{{ include.pictureFirst | relative_url }}" class="img-fluid rounded z-depth-1"
+					width="100%" height="auto" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+			</picture>
+		</figure>
+		<figure slot="second">
+			<picture>
+			  	{% if site.imagemagick.enabled %}
+					<source class="responsive-img-srcset"
+						  srcset="{% for i in site.imagemagick.widths %}{{ include.pictureSecond | remove: '.jpg' | remove: '.jpeg' | remove: '.png' | remove: '.tiff' | remove: '.gif' | relative_url }}-{{ i }}.webp {{i}}w,{% endfor %}"
+						  type="image/webp" sizes="95vw">
+			  	{% endif %}
+			  	<img src="{{ include.pictureSecond | relative_url }}" class="img-fluid rounded z-depth-1"
+					width="100%" height="auto" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+			</picture>
+		</figure>
+	</img-comparison-slider>
+
+	{% if include.caption %}
+		<div class="caption">{{ include.caption }}</div>
+	{% endif %}
+</div>

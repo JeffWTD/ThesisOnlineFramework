@@ -1,0 +1,15 @@
+
+  	<a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
+    	<div class="card">
+        	{% include figure.liquid
+          		loading="eager"
+          		path=project.img
+          		sizes = "250px"
+          		alt="project thumbnail"
+        	%}
+      		<div class="card-body">
+        		<p class="card-title">{{ project.title }}</p>
+        		<p class="card-text" style="text-align: justify">{{ project.description }}</p>
+      		</div>
+    	</div>
+  	</a>
